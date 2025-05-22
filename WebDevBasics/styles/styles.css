@@ -1,0 +1,30 @@
+#submit {
+    background-color: red;
+    color: white;
+    width: 50%;
+    height: 30px;
+    border-radius: 11px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color: white;
+    color: red;
+}
+#submit:active {
+    background-color: #ad5f5f;
+    color: white;
+}
+.container {
+    text-align: center;
+    margin-top: 35px;
+}
+body {
+    background-image: url('../resources/cute.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+html {
+    height: 100%;
+}
