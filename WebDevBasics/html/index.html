@@ -10,14 +10,47 @@
     <div class="container">
         <form>
             <label>Username: </label>
-            <input type="text" placeholder="Enter your username" required><br><br>
+            <input id="username" type="text" placeholder="Enter your username"><br><br>
+            <span class="error" id="username_error">Invalid username</span>
             <label>Password: </label>
-            <input type="password" placeholder="Enter your password" required><br><br>
-            <input type="checkbox">
-            <label>Remember Me</label><br><br>
+            <input id="password" type="password" placeholder="Enter your password"><br><br>
+            <span class="error" id="password_error">Invalid password</span>
+            <input onchange="ShowPassword()" id="show" type="checkbox">
+            <label>Show Passowrd</label><br><br>
             <a href="register.html">Don't have an account. Create one</a><br><br>
-            <button id="submit" type="submit">Login</button>
+            <button id="submit" type="button" onclick="Submit()">Login</button>
         </form>
     </div>
+    <script src="../javascript/service.js"></script>
+    <script>
+        function ShowPassword() {
+            const password = document.getElementById("password").value;
+            const checked = document.getElementById("show").checked;
+            if(checked)
+                document.getElementById("password").type = "text";
+            else
+                document.getElementById("password").type = "password";
+        }
+        function Submit() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            if(username === null || username.length <= 3 || username === "") {
+                document.getElementById("username_error").style.display = "block";
+                return;
+            }
+            else 
+                document.getElementById("username_error").style.display = "none";
+            if(password === null || password.length <= 3 || password === "") {
+                document.getElementById("password_error").style.display = "block";
+                return;
+            }
+            else 
+                document.getElementById("password_error").style.display = "none";
+            const data = {username: username, password: password};
+            const result = SendData(data);
+            if(!result) return;
+            window.location.href = "home.html";
+        }
+    </script>
 </body>
 </html>

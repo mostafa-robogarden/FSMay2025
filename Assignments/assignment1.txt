@@ -1,0 +1,26 @@
+********************Write HTML and CSS for the following********************************
+Create a login page with the following features:
+    1. Username field  
+    2. Password field
+    3. Login button
+    4. Show password checkbox
+    5. Create an account link
+    6. Forgot password link
+    7. Navigation bar with home button that navigates to the login page and about us button that navigates to the About page
+Create a register page with the following features:
+    1. Username field    
+    2. Full name field
+    3. Password field
+    4. Confirm password field
+    5. Register button
+    6. Back to login button
+    7. Navigation bar with home button that navigates to the login page and about us button that navigates to the About page
+Create an about page with the following features:
+    1. Description
+Create a Forgot password page with the following features:
+    1. Email field
+    2. Reset password button
+    3. Back to login button
+    4. Navigation bar with home button that navigates to the login page and about us button that navigates to the About page
+Create a Home page with the following features:
+    1. Table to do list.
